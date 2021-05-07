@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>parallax scrolling mountain</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">logo</a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="stars.png" id="stars">
+		<img src="moon.png" id="moon">
+		<img src="mountains_behind.png" id="mountains_behind">
+		<h2 id="text">Moon Light</h2>
+		<a href="#sec" id="btn">Explore</a>
+		<img src="mountains_front.png" id="mountains_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2>Parallax scolling Effects</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ex urna. Vestibulum aliquam consequat dolor, quis vestibulum ipsum malesuada id. Pellentesque libero quam, euismod a tincidunt ut, finibus eget nulla. Mauris vel imperdiet lectus. Proin at pretium dolor, pellentesque suscipit dolor. Nulla feugiat a mi sit amet posuere. Cras sollicitudin ex id tortor aliquet, ac consequat nisi tempor.
+
+Vivamus ac pellentesque lectus, ac efficitur lacus. Nulla vel vestibulum mi. Aliquam tincidunt ipsum posuere, viverra dui at, blandit tortor. Pellentesque vel faucibus neque. Vivamus nunc lectus, elementum et elementum vitae, tempus nec ipsum. Morbi tristique diam eget nunc viverra, a pharetra magna fermentum. Quisque varius, nulla gravida faucibus congue, quam nisl consectetur orci, vel gravida lacus dui a felis.
+
+In nec fermentum risus. Praesent tristique lacus vel odio varius, vitae consequat metus imperdiet. Aliquam convallis pulvinar tellus eget convallis. Morbi pellentesque tempus elit nec rhoncus. Sed vitae malesuada sapien. Integer justo ligula, aliquet tempor maximus vitae, congue laoreet est. Pellentesque in sapien vel diam molestie semper ut et est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium, diam ut auctor blandit, mauris magna pulvinar sem, eget dapibus lorem enim vel erat.<br><br>Vivamus ac pellentesque lectus, ac efficitur lacus. Nulla vel vestibulum mi. Aliquam tincidunt ipsum posuere, viverra dui at, blandit tortor. Pellentesque vel faucibus neque. Vivamus nunc lectus, elementum et elementum vitae, tempus nec ipsum. Morbi tristique diam eget nunc viverra, a pharetra magna fermentum. Quisque varius, nulla gravida faucibus congue, quam nisl consectetur orci, vel gravida lacus dui a felis.
+
+In nec fermentum risus. Praesent tristique lacus vel odio varius, vitae consequat metus imperdiet. Aliquam convallis pulvinar tellus eget convallis. Morbi pellentesque tempus elit nec rhoncus. Sed vitae malesuada sapien. Integer justo ligula, aliquet tempor maximus vitae, congue laoreet est. Pellentesque in sapien vel diam molestie semper ut et est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium, diam ut auctor blandit, mauris magna pulvinar sem, eget dapibus lorem enim<br><br>blandit tortor. Pellentesque vel faucibus neque. Vivamus nunc lectus, elementum et elementum vitae, tempus nec ipsum. Morbi tristique diam eget nunc viverra, a pharetra magna fermentum. Quisque varius, nulla gravida faucibus congue, quam nisl consectetur orci, vel gravida lacus dui a felis.
+
+In nec fermentum risus. Praesent tristique lacus vel odio varius, vitae consequat metus imperdiet. Aliquam convallis pulvinar tellus eget convallis. Morbi pellentesque tempus elit nec rhoncus. Sed vitae malesuada sapien. Integer justo ligula, aliquet tempor maximus vitae, congue laoreet est. Pellentesque in sapien vel diam molestie semper ut</p>
+	</div>
+
+
+	<script>
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountains_behind = document.getElementById('mountains_behind');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountains_fronts = document.getElementById('mountains_front');
+		let header = document.querySelector('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px';
+			mountains_behind.style.top = value * 0.5 + 'px';
+			mountains_front.style.top = value * 0 + 'px';
+			text.style.marginRight = value * 4 + 'px';
+			text.style.marginTop = value * 1.5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			header.style.top = value * 0.5 + 'px';
+
+		})
+	</script>
+	
+	
+	
+</body>
+</html>
